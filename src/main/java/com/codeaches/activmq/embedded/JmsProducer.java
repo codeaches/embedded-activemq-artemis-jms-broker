@@ -15,7 +15,7 @@ public class JmsProducer {
   private JmsTemplate jmsTemplate;
 
   public void send(String message) {
-    log.info("Sending message='{}'", message);
     jmsTemplate.convertAndSend(message);
+    log.info("Sent message='{}'", message);
   }
 }
